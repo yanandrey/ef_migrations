@@ -11,6 +11,7 @@ namespace efcore.Models.Context
         public DbSet<Vehicle> Vehicles { get; set; }
         public DbSet<Staff> Staffs { get; set; }
         public DbSet<Rent> Rents { get; set; }
+        public DbSet<Adress> Adresses { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -18,6 +19,7 @@ namespace efcore.Models.Context
             modelBuilder.ApplyConfiguration(new VehicleConfiguration());
             modelBuilder.ApplyConfiguration(new StaffConfiguration());
             modelBuilder.ApplyConfiguration(new RentConfiguration());
+            modelBuilder.ApplyConfiguration(new AdressConfiguration());
         }
     }
 }
