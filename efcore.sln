@@ -1,6 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "efcore", "efcore\efcore.csproj", "{1F3DF3BD-085E-4655-B00B-9312B86E3935}"
+#
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "v1_efcore", "v1_efcore\v1_efcore.csproj", "{1F3DF3BD-085E-4655-B00B-9312B86E3935}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "v2_efcore", "v2_efcore\v2_efcore.csproj", "{AB361731-D5AF-4D89-BF6E-B49D929FE3B8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -12,5 +15,9 @@ Global
 		{1F3DF3BD-085E-4655-B00B-9312B86E3935}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F3DF3BD-085E-4655-B00B-9312B86E3935}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F3DF3BD-085E-4655-B00B-9312B86E3935}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB361731-D5AF-4D89-BF6E-B49D929FE3B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB361731-D5AF-4D89-BF6E-B49D929FE3B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB361731-D5AF-4D89-BF6E-B49D929FE3B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB361731-D5AF-4D89-BF6E-B49D929FE3B8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
