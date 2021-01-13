@@ -2,15 +2,17 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using v2_efcore.Models.Context;
 
 namespace v2_efcore.Migrations
 {
     [DbContext(typeof(MyContext))]
-    partial class MyContextModelSnapshot : ModelSnapshot
+    [Migration("20210113142050_Adress")]
+    partial class Adress
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -84,41 +86,6 @@ namespace v2_efcore.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Customers");
-                });
-
-            modelBuilder.Entity("v2_efcore.Models.Hiring", b =>
-                {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    b.Property<DateTime>("Beginning")
-                        .HasColumnType("datetime(6)");
-
-                    b.Property<string>("Department")
-                        .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("varchar(25) CHARACTER SET utf8mb4");
-
-                    b.Property<bool>("Enabled")
-                        .HasColumnType("tinyint(1)");
-
-                    b.Property<string>("Function")
-                        .IsRequired()
-                        .HasMaxLength(25)
-                        .HasColumnType("varchar(25) CHARACTER SET utf8mb4");
-
-                    b.Property<int>("Salary")
-                        .HasColumnType("int");
-
-                    b.Property<int>("StaffId")
-                        .HasColumnType("int");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("StaffId");
-
-                    b.ToTable("Hirings");
                 });
 
             modelBuilder.Entity("v2_efcore.Models.Rent", b =>
@@ -226,17 +193,6 @@ namespace v2_efcore.Migrations
                         .IsRequired();
 
                     b.Navigation("Customer");
-                });
-
-            modelBuilder.Entity("v2_efcore.Models.Hiring", b =>
-                {
-                    b.HasOne("v2_efcore.Models.Staff", "Staff")
-                        .WithMany()
-                        .HasForeignKey("StaffId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Staff");
                 });
 
             modelBuilder.Entity("v2_efcore.Models.Rent", b =>
